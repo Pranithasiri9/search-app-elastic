@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Search API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .info {
+            margin-top: 20px;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Course Search API</h1>
+    <p>Use <code>/api/search</code> to search for courses.</p>
+
+    <form action="/api/search" method="get">
+        <input type="text" name="q" placeholder="Search courses..." />
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="info">
+        <p>You can also try these parameters:</p>
+        <ul>
+            <li><code>category</code>: e.g., Math, Science</li>
+            <li><code>type</code>: COURSE, CLUB, ONE_TIME</li>
+            <li><code>minAge</code> / <code>maxAge</code></li>
+            <li><code>minPrice</code> / <code>maxPrice</code></li>
+            <li><code>startDate</code>: ISO-8601 (e.g., 2025-09-01T10:00:00Z)</li>
+            <li><code>sort</code>: upcoming, priceAsc, priceDesc</li>
+        </ul>
+    </div>
+
+</body>
+</html>
