@@ -4,7 +4,6 @@ import co.elastic.clients.elasticsearch._types.SortOptions;
 import co.elastic.clients.elasticsearch._types.SortOrder;
 import co.elastic.clients.elasticsearch._types.query_dsl.*;
 import co.elastic.clients.json.JsonData;
-
 import com.Pranitha.elasticsearchapp.document.CourseDocument;
 import com.Pranitha.elasticsearchapp.dto.CourseSearchRequest;
 import com.Pranitha.elasticsearchapp.dto.CourseSearchResponse;
@@ -16,6 +15,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.SearchHits;
 import org.springframework.stereotype.Service;
 
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -39,11 +39,10 @@ public class CourseSearchService {
             );
 
             List<CourseDocument> documents = searchHits.stream()
-            	    .map(hit -> hit.getContent())
-            	    .collect(Collectors.toList());
+                    .map(hit -> hit.getContent())
+                    .collect(Collectors.toList());
 
-            	return new CourseSearchResponse(searchHits.getTotalHits(), documents); 
-
+            return new CourseSearchResponse(searchHits.getTotalHits(), documents);
 
         } catch (Exception e) {
             throw new RuntimeException("Error searching courses", e);
@@ -54,10 +53,14 @@ public class CourseSearchService {
         BoolQuery.Builder boolQueryBuilder = new BoolQuery.Builder();
 
         if (request.getQ() != null && !request.getQ().isEmpty()) {
-            boolQueryBuilder.must(m -> m.multiMatch(mm -> mm
+            //  Fuzzy match added
+            boolQueryBuilder.must(m -> m
+                .multiMatch(mm -> mm
                     .query(request.getQ())
                     .fields("title", "description")
-            ));
+                    .fuzziness("AUTO") // Enables fuzzy search
+                )
+            );
         }
 
         if (request.getCategory() != null) {
@@ -81,13 +84,12 @@ public class CourseSearchService {
         if (request.getMinPrice() != null || request.getMaxPrice() != null) {
             boolQueryBuilder.filter(buildRangeQuery("price", request.getMinPrice(), request.getMaxPrice()));
         }
+		if (request.getNextSessionDate() != null) {
+			boolQueryBuilder.filter(f -> f.range(r -> r
+					.field("nextSessionDate")
+					.gte(JsonData.of(request.getNextSessionDate().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME)))
+			));
 
-        if (request.getNextSessionDate() != null) {
-            String dateStr = request.getNextSessionDate().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
-            boolQueryBuilder.filter(f -> f.range(r -> r
-                    .field("nextSessionDate")
-                    .gte(JsonData.of(dateStr))
-            ));
         }
 
         SortOptions sortOptions = buildSortOptions(request);

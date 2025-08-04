@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.InputStream;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class CourseDataLoader implements CommandLineRunner {
@@ -27,10 +28,16 @@ public class CourseDataLoader implements CommandLineRunner {
         if (courseRepository.count() == 0) {
             InputStream inputStream = new ClassPathResource("sample-courses.json").getInputStream();
             List<CourseDocument> courses = objectMapper.readValue(inputStream, new TypeReference<>() {});
-            courseRepository.saveAll(courses);
-            System.out.println("Sample data indexed into Elasticsearch.");
+
+            // Ensure each course has titleSuggest set
+            List<CourseDocument> updatedCourses = courses.stream()
+                    .peek(course -> course.setTitleSuggest(List.of(course.getTitle())))
+                    .collect(Collectors.toList());
+
+            courseRepository.saveAll(updatedCourses);
+            System.out.println(" Sample data indexed into Elasticsearch.");
         } else {
-            System.out.println("Courses already exist in Elasticsearch. Skipping import.");
+            System.out.println(" Courses already exist in Elasticsearch. Skipping import.");
         }
     }
 }

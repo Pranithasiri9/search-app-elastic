@@ -2,6 +2,7 @@
   {
     "id": "C001",
     "title": "Math Explorers",
+    "titleSuggest": ["Math Explorers"],
     "description": "Explore foundational math concepts through fun activities.",
     "category": "Math",
     "type": "COURSE",
@@ -14,6 +15,7 @@
   {
     "id": "C002",
     "title": "Space Science Club",
+    "titleSuggest": ["Space Science Club"],
     "description": "Learn about stars, planets, and the universe.",
     "category": "Science",
     "type": "CLUB",
@@ -26,6 +28,7 @@
   {
     "id": "C003",
     "title": "Creative Drawing",
+    "titleSuggest": ["Creative Drawing"],
     "description": "Hands-on drawing lessons to improve visual creativity.",
     "category": "Art",
     "type": "ONE_TIME",
@@ -38,6 +41,7 @@
   {
     "id": "C004",
     "title": "Intro to Robotics",
+    "titleSuggest": ["Intro to Robotics"],
     "description": "Build and program beginner robots with LEGO kits.",
     "category": "Robotics",
     "type": "COURSE",
@@ -50,6 +54,7 @@
   {
     "id": "C005",
     "title": "Kids Yoga",
+    "titleSuggest": ["Kids Yoga"],
     "description": "Improve focus and flexibility with age-appropriate yoga.",
     "category": "Health",
     "type": "CLUB",
@@ -62,6 +67,7 @@
   {
     "id": "C006",
     "title": "History Detectives",
+    "titleSuggest": ["History Detectives"],
     "description": "Explore ancient civilizations and historical mysteries.",
     "category": "History",
     "type": "COURSE",
@@ -74,6 +80,7 @@
   {
     "id": "C007",
     "title": "Junior Coding",
+    "titleSuggest": ["Junior Coding"],
     "description": "Introduction to programming with fun challenges.",
     "category": "Technology",
     "type": "COURSE",
@@ -86,6 +93,7 @@
   {
     "id": "C008",
     "title": "Nature Explorers",
+    "titleSuggest": ["Nature Explorers"],
     "description": "Weekly outdoor sessions exploring plants and animals.",
     "category": "Science",
     "type": "CLUB",
@@ -98,6 +106,7 @@
   {
     "id": "C009",
     "title": "Public Speaking for Kids",
+    "titleSuggest": ["Public Speaking for Kids"],
     "description": "Boost confidence with fun public speaking games.",
     "category": "Language",
     "type": "COURSE",
@@ -110,6 +119,7 @@
   {
     "id": "C010",
     "title": "Dance Basics",
+    "titleSuggest": ["Dance Basics"],
     "description": "Learn the fundamentals of different dance forms.",
     "category": "Art",
     "type": "ONE_TIME",
@@ -122,6 +132,7 @@
   {
     "id": "C011",
     "title": "Magic of Chemistry",
+    "titleSuggest": ["Magic of Chemistry"],
     "description": "Fun experiments introducing basic chemistry concepts.",
     "category": "Science",
     "type": "COURSE",
@@ -134,6 +145,7 @@
   {
     "id": "C012",
     "title": "Young Authors",
+    "titleSuggest": ["Young Authors"],
     "description": "Storytelling and creative writing for kids.",
     "category": "Language",
     "type": "CLUB",
@@ -146,6 +158,7 @@
   {
     "id": "C013",
     "title": "Musical Minds",
+    "titleSuggest": ["Musical Minds"],
     "description": "Explore instruments and rhythm with fun activities.",
     "category": "Music",
     "type": "COURSE",
@@ -158,6 +171,7 @@
   {
     "id": "C014",
     "title": "Junior Architects",
+    "titleSuggest": ["Junior Architects"],
     "description": "Hands-on projects to understand design and structure.",
     "category": "Technology",
     "type": "COURSE",
@@ -170,6 +184,7 @@
   {
     "id": "C015",
     "title": "Eco Kids",
+    "titleSuggest": ["Eco Kids"],
     "description": "Understand recycling, climate, and planet care.",
     "category": "Science",
     "type": "ONE_TIME",
@@ -182,6 +197,7 @@
   {
     "id": "C016",
     "title": "Math Champions",
+    "titleSuggest": ["Math Champions"],
     "description": "Prepare for math olympiads with expert guidance.",
     "category": "Math",
     "type": "COURSE",
@@ -194,6 +210,7 @@
   {
     "id": "C017",
     "title": "Mindful Me",
+    "titleSuggest": ["Mindful Me"],
     "description": "A mindfulness course to help kids relax and focus.",
     "category": "Health",
     "type": "CLUB",
@@ -206,6 +223,7 @@
   {
     "id": "C018",
     "title": "Chess Club",
+    "titleSuggest": ["Chess Club"],
     "description": "Learn chess strategies and tactics weekly.",
     "category": "Math",
     "type": "CLUB",
@@ -218,6 +236,7 @@
   {
     "id": "C019",
     "title": "Drama Kids",
+    "titleSuggest": ["Drama Kids"],
     "description": "Acting, role play, and stage confidence for children.",
     "category": "Art",
     "type": "COURSE",
@@ -230,6 +249,7 @@
   {
     "id": "C020",
     "title": "Bird Watchers Club",
+    "titleSuggest": ["Bird Watchers Club"],
     "description": "Observe and record local birds with fun facts.",
     "category": "Science",
     "type": "CLUB",
@@ -242,18 +262,20 @@
   {
     "id": "C021",
     "title": "Digital Art Basics",
-      "description": "Learn to draw and design using tablets and apps.",
-      "category": "Technology",
-      "type": "ONE_TIME",
-      "gradeRange": "4th–6th",
-      "minAge": 9,
-      "maxAge": 11,
-      "price": 50.00,
-      "nextSessionDate": "2025-08-25T10:00:00Z"
+    "titleSuggest": ["Digital Art Basics"],
+    "description": "Learn to draw and design using tablets and apps.",
+    "category": "Technology",
+    "type": "ONE_TIME",
+    "gradeRange": "4th–6th",
+    "minAge": 9,
+    "maxAge": 11,
+    "price": 50.00,
+    "nextSessionDate": "2025-08-25T10:00:00Z"
   },
   {
     "id": "C022",
     "title": "Ancient Egypt Adventure",
+    "titleSuggest": ["Ancient Egypt Adventure"],
     "description": "Uncover the secrets of pharaohs and pyramids.",
     "category": "History",
     "type": "COURSE",
@@ -266,6 +288,7 @@
   {
     "id": "C023",
     "title": "Ballet Basics",
+    "titleSuggest": ["Ballet Basics"],
     "description": "Introduction to ballet movement and rhythm.",
     "category": "Art",
     "type": "CLUB",
@@ -278,6 +301,7 @@
   {
     "id": "C024",
     "title": "Astronomy Night",
+    "titleSuggest": ["Astronomy Night"],
     "description": "One-night stargazing event with telescopes.",
     "category": "Science",
     "type": "ONE_TIME",
@@ -290,6 +314,7 @@
   {
     "id": "C025",
     "title": "Tech Tinkers",
+    "titleSuggest": ["Tech Tinkers"],
     "description": "Build simple gadgets using everyday materials.",
     "category": "Technology",
     "type": "COURSE",
@@ -302,6 +327,7 @@
   {
     "id": "C026",
     "title": "Origami Fun",
+    "titleSuggest": ["Origami Fun"],
     "description": "Learn to fold paper into art.",
     "category": "Art",
     "type": "ONE_TIME",
@@ -314,6 +340,7 @@
   {
     "id": "C027",
     "title": "Young Debaters",
+    "titleSuggest": ["Young Debaters"],
     "description": "Discuss and debate fun kid-friendly topics.",
     "category": "Language",
     "type": "CLUB",
@@ -326,6 +353,7 @@
   {
     "id": "C028",
     "title": "Animal Kingdom",
+    "titleSuggest": ["Animal Kingdom"],
     "description": "Discover mammals, reptiles, and ocean life.",
     "category": "Science",
     "type": "COURSE",
@@ -338,6 +366,7 @@
   {
     "id": "C029",
     "title": "Mind Games",
+    "titleSuggest": ["Mind Games"],
     "description": "Play fun brain games to boost memory and logic.",
     "category": "Math",
     "type": "COURSE",
@@ -350,6 +379,7 @@
   {
     "id": "C030",
     "title": "Super Scientists",
+    "titleSuggest": ["Super Scientists"],
     "description": "Become a junior scientist with hands-on projects.",
     "category": "Science",
     "type": "COURSE",
@@ -362,6 +392,7 @@
   {
     "id": "C031",
     "title": "Poetry Jam",
+    "titleSuggest": ["Poetry Jam"],
     "description": "Read and write poems in a fun setting.",
     "category": "Language",
     "type": "CLUB",
@@ -374,6 +405,7 @@
   {
     "id": "C032",
     "title": "Music Makers",
+    "titleSuggest": ["Music Makers"],
     "description": "Use everyday items to make music and rhythm.",
     "category": "Music",
     "type": "COURSE",
@@ -386,6 +418,7 @@
   {
     "id": "C033",
     "title": "Lego STEM Lab",
+    "titleSuggest": ["Lego STEM Lab"],
     "description": "STEM challenges using Lego kits and fun themes.",
     "category": "Robotics",
     "type": "COURSE",
@@ -398,6 +431,7 @@
   {
     "id": "C034",
     "title": "Improv Acting",
+    "titleSuggest": ["Improv Acting"],
     "description": "Express yourself through impromptu theater games.",
     "category": "Art",
     "type": "CLUB",
@@ -410,6 +444,7 @@
   {
     "id": "C035",
     "title": "Word Wizards",
+    "titleSuggest": ["Word Wizards"],
     "description": "Vocabulary building games and language puzzles.",
     "category": "Language",
     "type": "COURSE",
@@ -422,6 +457,7 @@
   {
     "id": "C036",
     "title": "Little Engineers",
+    "titleSuggest": ["Little Engineers"],
     "description": "Simple mechanical models using kits.",
     "category": "Technology",
     "type": "COURSE",
@@ -434,6 +470,7 @@
   {
     "id": "C037",
     "title": "Math Puzzle Club",
+    "titleSuggest": ["Math Puzzle Club"],
     "description": "Weekly math riddles and logic games.",
     "category": "Math",
     "type": "CLUB",
@@ -446,6 +483,7 @@
   {
     "id": "C038",
     "title": "Fairy Tale Theater",
+    "titleSuggest": ["Fairy Tale Theater"],
     "description": "Act out fairy tales and classic stories.",
     "category": "Language",
     "type": "COURSE",
@@ -458,6 +496,7 @@
   {
     "id": "C039",
     "title": "Build a Birdhouse",
+    "titleSuggest": ["Build a Birdhouse"],
     "description": "DIY session with hammers and nails (supervised!).",
     "category": "Art",
     "type": "ONE_TIME",
@@ -470,6 +509,7 @@
   {
     "id": "C040",
     "title": "Beginner Guitar",
+    "titleSuggest": ["Beginner Guitar"],
     "description": "Learn chords and strumming patterns.",
     "category": "Music",
     "type": "COURSE",
@@ -482,6 +522,7 @@
   {
     "id": "C041",
     "title": "Yoga & Wellness",
+    "titleSuggest": ["Yoga & Wellness"],
     "description": "Relaxation, stretching, and breathing techniques.",
     "category": "Health",
     "type": "CLUB",
@@ -494,6 +535,7 @@
   {
     "id": "C042",
     "title": "Future Inventors",
+    "titleSuggest": ["Future Inventors"],
     "description": "Design and prototype inventions using recycled items.",
     "category": "Technology",
     "type": "COURSE",
@@ -506,6 +548,7 @@
   {
     "id": "C043",
     "title": "Plant Science Lab",
+    "titleSuggest": ["Plant Science Lab"],
     "description": "Grow and observe your own mini plants.",
     "category": "Science",
     "type": "COURSE",
@@ -518,6 +561,7 @@
   {
     "id": "C044",
     "title": "3D Modelling Basics",
+    "titleSuggest": ["3D Modelling Basics"],
     "description": "Design models using beginner-friendly tools.",
     "category": "Technology",
     "type": "COURSE",
@@ -530,6 +574,7 @@
   {
     "id": "C045",
     "title": "Story Builders",
+    "titleSuggest": ["Story Builders"],
     "description": "Turn fun ideas into storybooks.",
     "category": "Language",
     "type": "COURSE",
@@ -542,6 +587,7 @@
   {
     "id": "C046",
     "title": "Number Ninjas",
+    "titleSuggest": ["Number Ninjas"],
     "description": "Master multiplication and division with games.",
     "category": "Math",
     "type": "COURSE",
@@ -554,6 +600,7 @@
   {
     "id": "C047",
     "title": "Science Lab Express",
+    "titleSuggest": ["Science Lab Express"],
     "description": "Quick one-hour experiments on physics and chemistry.",
     "category": "Science",
     "type": "ONE_TIME",
@@ -566,6 +613,7 @@
   {
     "id": "C048",
     "title": "Animation for Kids",
+    "titleSuggest": ["Animation for Kids"],
     "description": "Create short animated clips with software.",
     "category": "Technology",
     "type": "COURSE",
@@ -578,6 +626,7 @@
   {
     "id": "C049",
     "title": "Piano Starters",
+    "titleSuggest": ["Piano Starters"],
     "description": "Beginner-friendly piano lessons for kids.",
     "category": "Music",
     "type": "COURSE",
@@ -590,6 +639,7 @@
   {
     "id": "C050",
     "title": "Health Heroes",
+    "titleSuggest": ["Health Heroes"],
     "description": "Learn about hygiene, nutrition, and exercise.",
     "category": "Health",
     "type": "COURSE",
@@ -599,9 +649,4 @@
     "price": 30.00,
     "nextSessionDate": "2025-09-23T10:00:00Z"
   }
-
-  
-
-  
 ]
-

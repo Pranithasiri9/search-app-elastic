@@ -4,9 +4,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.*;
 
 import java.time.ZonedDateTime;
+import java.util.List;
 
 @Document(indexName = "courses")
-@Setting(settingPath = "elasticsearch/settings.json") 
+@Setting(settingPath = "elasticsearch/settings.json")
 public class CourseDocument {
 
     @Id
@@ -29,13 +30,19 @@ public class CourseDocument {
 
     @Field(type = FieldType.Integer)
     private Integer maxAge;
+
     @Field(type = FieldType.Double)
     private Double price;
 
     @Field(type = FieldType.Date, format = DateFormat.date_time)
     private ZonedDateTime nextSessionDate;
 
-    // Getters and setters
+    //  Completion field for Autocomplete Suggestion
+    @CompletionField
+    private List<String> titleSuggest;
+
+    // Getters and Setters
+
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
@@ -62,4 +69,12 @@ public class CourseDocument {
 
     public ZonedDateTime getNextSessionDate() { return nextSessionDate; }
     public void setNextSessionDate(ZonedDateTime nextSessionDate) { this.nextSessionDate = nextSessionDate; }
+
+    public List<String> getTitleSuggest() {
+        return titleSuggest;
+    }
+
+    public void setTitleSuggest(List<String> titleSuggest) {
+        this.titleSuggest = titleSuggest;
+    }
 }

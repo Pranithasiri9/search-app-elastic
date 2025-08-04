@@ -5,35 +5,41 @@
     <title>Course Search API</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 800px;
+            background-color: #f5f7fa;
             color: #333;
         }
 
         h1 {
-            color: #0066cc;
+            color: #007acc;
+            margin-bottom: 10px;
         }
 
         form {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         input[type="text"] {
-            padding: 8px;
+            padding: 10px;
             width: 300px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 6px;
+            font-size: 16px;
         }
 
         button {
-            padding: 8px 12px;
+            padding: 10px 16px;
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
+            font-size: 16px;
             cursor: pointer;
-            margin-left: 5px;
         }
 
         button:hover {
@@ -41,37 +47,62 @@
         }
 
         .info {
-            margin-top: 20px;
+            margin-top: 30px;
+            background-color: #eef4fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.05);
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         code {
-            background: #eee;
-            padding: 2px 4px;
+            background: #e2e6ea;
+            padding: 2px 6px;
             border-radius: 4px;
+            font-family: monospace;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to Course Search API</h1>
-    <p>Use <code>/api/search</code> to search for courses.</p>
+    <h1>🎯 Course Search API</h1>
+    <p>Search courses via <code>/api/search</code> with powerful filters and pagination.</p>
 
     <form action="/api/search" method="get">
-        <input type="text" name="q" placeholder="Search courses..." />
-        <button type="submit">Search</button>
+        <input type="text" name="q" placeholder="Search courses (e.g., math, robotics)" />
+        <button type="submit">🔍 Search</button>
     </form>
 
     <div class="info">
-        <p>You can also try these parameters:</p>
+        <h3>Supported Query Parameters</h3>
         <ul>
-            <li><code>category</code>: e.g., Math, Science</li>
-            <li><code>type</code>: COURSE, CLUB, ONE_TIME</li>
+            <li><code>q</code>: Search keyword (title or description)</li>
+            <li><code>category</code>: e.g., <code>Math</code>, <code>Science</code></li>
+            <li><code>type</code>: <code>COURSE</code>, <code>CLUB</code>, <code>ONE_TIME</code></li>
             <li><code>minAge</code> / <code>maxAge</code></li>
             <li><code>minPrice</code> / <code>maxPrice</code></li>
-            <li><code>startDate</code>: ISO-8601 (e.g., 2025-09-01T10:00:00Z)</li>
-            <li><code>sort</code>: upcoming, priceAsc, priceDesc</li>
+            <li><code>nextSessionDate</code>: ISO-8601 (e.g., <code>2025-09-01T10:00:00Z</code>)</li>
+            <li><code>sort</code>: <code>upcoming</code> | <code>priceAsc</code> | <code>priceDesc</code></li>
+            <li><code>page</code> / <code>size</code>: Pagination support</li>
         </ul>
+
+        <p><strong>Example:</strong><br>
+            <code>/api/search?q=science&category=Science&minAge=8&sort=priceAsc&page=0&size=5</code>
+        </p>
     </div>
+
+    <footer>
+        &copy; 2025 Course Search API | Developed with ️ using Spring Boot + Elasticsearch
+    </footer>
 
 </body>
 </html>
