@@ -127,6 +127,7 @@ Filter by Category:
 
 curl "http://localhost:8080/api/search?category=Science"
 
+
 Filter by Price Range:
 
 curl "http://localhost:8080/api/search?minPrice=30&maxPrice=60"
