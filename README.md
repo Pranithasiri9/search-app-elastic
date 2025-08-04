@@ -145,7 +145,7 @@ curl "http://localhost:8080/api/search?q=algebra&page=1&size=5"
 
 Date filter (courses on or after a specific date):
 
-curl "http://localhost:8080/api/search?startDate=2025-08-01"
+curl "http://localhost:8080/api/search?nextSessionDate=2025-08-01T00:00:00Z"
   ## Integration Testing
 This project includes a suite of integration tests to ensure the search service and data indexing are working as expected.
 
