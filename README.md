@@ -125,7 +125,7 @@ curl "http://localhost:8080/api/search"
 
 Filter by Category:
 
-curl "http://localhost:8080/api/search?category=Math"
+curl "http://localhost:8080/api/search?category=Science"
 
 Filter by Price Range:
 
@@ -141,7 +141,7 @@ curl "http://localhost:8080/api/search?sort=priceDesc"
 
 Full-text search with pagination:
 
-curl "http://localhost:8080/api/search?q=algebra&page=1&size=5"
+curl "http://localhost:8080/api/search?q=math&page=0&size=3"
 
 Date filter (courses on or after a specific date):
 
