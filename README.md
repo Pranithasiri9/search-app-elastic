@@ -161,5 +161,81 @@ From the project root directory, you can run all tests using the Gradle wrapper:
 
 ./gradlew test
 
+## Part 4: Assignment B (Bonus) - Autocomplete Suggestions & Fuzzy Search
 
+This section covers the implementation of enhanced search capabilities beyond basic filtering and sorting.
+
+### 4.1. Autocomplete (Completion Suggester)
+
+The application provides real-time autocomplete suggestions for course titles as users type. This is achieved using Elasticsearch's Completion Suggester.
+
+
+During the application startup, when `sample-courses.json` is bulk-indexed, each course document now includes a `title` and a corresponding `suggest` sub-field that the Completion Suggester uses.
+
+#### 4.1.2. Autocomplete Endpoint
+
+A dedicated REST endpoint is exposed to provide autocomplete suggestions.
+
+**Endpoint:** `GET /api/search/suggest?q={partialTitle}`
+
+**Description:** This endpoint queries Elasticsearch using the `completion suggester` API. It returns up to 10 matching course titles that start with the provided `partialTitle`. The response is a JSON array of suggested course titles.
+
+**Example Usage (using `curl`):**
+
+* **Input:** Search for titles starting with "mat"
+    ```bash
+    curl "http://localhost:8080/api/search/suggest?q=mat"
+    ```
+* **Expected Output:**
+    ```json
+    ["Math Explorers", "Math Champions", "Math Puzzle Club"]
+    ```
+   ]
+
+* **Input:** Search for titles starting with "eco"
+    ```bash
+    curl "http://localhost:8080/api/search/suggest?q=eco"
+    ```
+* **Expected Output:**
+    ```json
+    ["Eco Kids"]
+    ```
+   ]
+
+* **Input:** Search for titles starting with "ani"
+    ```bash
+    curl "http://localhost:8080/api/search/suggest?q=ani"
+    ```
+* **Expected Output:**
+    ```json
+    ["Animal Kingdom"]
+    ```
+   ]
+
+These suggestions are sourced from the `titleSuggest` field (which corresponds to the `suggest` sub-field in Elasticsearch) and utilize the Elasticsearch Completion Suggester.
+
+#### 4.2.2. Documentation Examples
+
+Here are examples demonstrating how a fuzzy query with a typo still returns the correct document(s):
+
+* **Input:** Search for "mathh" (typo for "math")
+    ```bash
+    curl "http://localhost:8080/api/search?q=mathh"
+    ```
+* **Expected Output:** Courses matching: "Math Explorers", "Math Champions", "Math Puzzle Club", etc.
+    (The response will include the full JSON structure of matching courses, similar to Assignment A's search results, but with these titles appearing due to fuzziness).
+
+* **Input:** Search for "histroy" (typo for "history")
+    ```bash
+    curl "[http://8080/api/search?q=histroy](http://8080/api/search?q=histroy)"
+    ```
+* **Expected Output:** Courses matching: "History Detectives", "Ancient Egypt Adventure", etc.
+
+* **Input:** Search for "muscal" (typo for "musical")
+    ```bash
+    curl "[http://8080/api/search?q=muscal](http://8080/api/search?q=muscal)"
+    ```
+* **Expected Output:** Courses matching: "Musical Minds", "Music Makers", etc.
+
+---
 
